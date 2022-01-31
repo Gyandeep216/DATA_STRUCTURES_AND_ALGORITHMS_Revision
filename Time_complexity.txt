@@ -1,0 +1,41 @@
+Complexity per loop is linear if i++/ i=i+2/ i=i+k/ etc
+
+So complexity O(n)
+*******************************************************************************
+But, 
+if i=i*k;
+
+For eg:
+for(int i=1; i<b; i=i*k){
+    O(1) code
+    }
+    
+    Here,
+    Number of times the loop runs= c times    (1, k, k^2, k^3,........k^c-1)  such that k^c-1 <b  i.e. nearest number smaler than b
+    Therefore;
+    k^c-1 < b
+    c-1 < log(k)b
+    c   < log(k)b + 1
+
+Therefore O(log n)     O(log b) here
+************************************************************************************
+for(int i=b; i>0; i=i/k){
+    O(1) code
+    }
+Same(just opp)
+Therefore O(log n)     O(log b) here
+************************************************************************************
+****************************************************************************************
+Most imp
+for(int i=2; i<b; i=pow(i, k)){
+    O(1) code
+    }
+2, 2^k, 2^k^2, .......2^K^(c-1)
+2^k^(c-1) < b
+
+O(loglogn)
+
+
+
+*******************************************************************************************
+Recursion time complexity
